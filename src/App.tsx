@@ -5,7 +5,7 @@ import {Content} from "./components/Content.tsx";
 function App() {
 
     return (
-        <div className={"container flex-row"} style={{
+        <div className={"container-xxl flex-row"} style={{
             display: "flex"
         }}>
             <Sidebar></Sidebar>

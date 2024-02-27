@@ -8,7 +8,7 @@ interface ContentProps {
  * @constructor
  */
 export function Content(props: ContentProps) {
-    const className = "123123 " + props.className
+    const className = "" + props.className
 
     return (
         <div className={className}>
@@ -50,7 +50,9 @@ function Header({className = ""}: { className?: string }) {
 function RealContent() {
 
     return (
-        <div>
+        <div className={""} style={{
+            height: "80vh",
+        }}>
             This is real content
         </div>
     )
