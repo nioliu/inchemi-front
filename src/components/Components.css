@@ -40,8 +40,17 @@ input:hover {
     height: 1rem;
 }
 
+.menu-btn {
+    margin: 5% 10px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    left: 0; /* Initial position */
+    transition: all 0.3s; /* Apply transition here to have it ready */
+}
 
-.flex-row, .flex-row-reverse {
-    display: flex;
-    align-items: center;
+.menu-btn:hover, .menu-btn-choose {
+    transition: all 0.3s; /* Apply transition here to have it ready */
+    left: 10%;
 }

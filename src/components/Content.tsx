@@ -11,7 +11,9 @@ export function Content(props: ContentProps) {
     const className = "" + props.className
 
     return (
-        <div className={className}>
+        <div className={className} style={{
+            marginLeft: "200px"
+        }}>
             <Header></Header>
             <RealContent></RealContent>
         </div>
