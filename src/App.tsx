@@ -8,7 +8,8 @@ function App() {
         <div className={"container-xxl flex-row"} style={{
             display: "flex",
             minHeight: "100vh",
-            alignItems: "flex-start"
+            alignItems: "flex-start",
+            overflowX: "hidden"
         }}>
             <Sidebar></Sidebar>
             <Content className={"flex-grow-1"}></Content>

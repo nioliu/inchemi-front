@@ -1,3 +1,5 @@
+import {Outlet} from "react-router-dom";
+
 interface ContentProps {
     className?: string;
 }
@@ -11,11 +13,9 @@ export function Content(props: ContentProps) {
     const className = "" + props.className
 
     return (
-        <div className={className} style={{
-            marginLeft: "200px"
-        }}>
+        <div className={className} style={{}}>
             <Header></Header>
-            <RealContent></RealContent>
+            <Outlet></Outlet>
         </div>
     );
 }
@@ -25,7 +25,8 @@ function Header({className = ""}: { className?: string }) {
     return (
         <>
             <div className={"flex-row-reverse"} style={{
-                display: "flex"
+                display: "flex",
+                alignItems: "center"
             }}>
                 {/*    personal information*/}
                 <div>niloliu</div>
@@ -42,20 +43,5 @@ function Header({className = ""}: { className?: string }) {
                 </div>
             </div>
         </>
-    )
-}
-
-/**
- * real content
- * @constructor
- */
-function RealContent() {
-
-    return (
-        <div className={""} style={{
-            height: "80vh",
-        }}>
-            This is real content
-        </div>
     )
 }
