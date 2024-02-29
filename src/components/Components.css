@@ -47,9 +47,17 @@ input:hover {
     position: relative;
     left: 0; /* Initial position */
     transition: all 0.3s; /* Apply transition here to have it ready */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-btn:hover, .menu-btn-choose {
     transition: all 0.3s; /* Apply transition here to have it ready */
-    left: 10%;
+    left: 10px;
+    background-color: gray;
+}
+
+.menu-btn-choose{
+    background-color: aqua!important;
 }
