@@ -1,4 +1,7 @@
 import {Outlet} from "react-router-dom";
+import {Button} from "react-bootstrap";
+import {LoginComp} from "./LoginComp.tsx";
+import {useState} from "react";
 
 interface ContentProps {
     className?: string;
@@ -20,7 +23,22 @@ export function Content(props: ContentProps) {
     );
 }
 
-function Header({className = ""}: { className?: string }) {
+function Header() {
+    const [showLogin, setShowLogin] = useState(true);
+
+    function loginCallBack(action: number) {
+        switch (action) {
+            case -1:
+                setShowLogin(false);
+                break;
+            default:
+            // Handle other actions
+        }
+    }
+
+    function handleClickLogin() {
+        setShowLogin(true)
+    }
 
     return (
         <>
@@ -29,7 +47,8 @@ function Header({className = ""}: { className?: string }) {
                 alignItems: "center"
             }}>
                 {/*    personal information*/}
-                <div>niloliu</div>
+                <Button variant={"primary"} onClick={handleClickLogin}>Login</Button>
+                {showLogin && <LoginComp callback={loginCallBack}></LoginComp>}
                 {/*search*/}
                 <div className="group">
                     <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">
