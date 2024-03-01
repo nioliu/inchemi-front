@@ -16,15 +16,17 @@ export function Content(props: ContentProps) {
     const className = "" + props.className
 
     return (
-        <div className={className} style={{}}>
+        <div className={className} style={{display: "flex", flexDirection: "column", minHeight: "100vh"}}>
             <Header></Header>
-            <Outlet></Outlet>
+            <div className={"content"}>
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 }
 
 function Header() {
-    const [showLogin, setShowLogin] = useState(true);
+    const [showLogin, setShowLogin] = useState(false);
 
     function loginCallBack(action: number) {
         switch (action) {
@@ -44,7 +46,10 @@ function Header() {
         <>
             <div className={"flex-row-reverse"} style={{
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
+                padding: "20px",
+                gap: "10px",
+                backgroundColor: "#e76f51"
             }}>
                 {/*    personal information*/}
                 <Button variant={"primary"} onClick={handleClickLogin}>Login</Button>

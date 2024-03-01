@@ -52,16 +52,17 @@ input:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
 .menu-btn:hover, .menu-btn-choose {
     transition: all 0.3s; /* Apply transition here to have it ready */
     left: 10px;
-    background-color: gray;
+    background-color: #264653;
 }
 
 .menu-btn-choose {
-    background-color: aqua !important;
+    background-color: #2a9d8f !important;
 }
 
 @keyframes fadeIn {
@@ -116,7 +117,6 @@ input:hover {
         background-color: #212121;
         padding: 1.5rem;
         border-radius: 10px;
-        box-shadow: 0 48px 35px -48px #e8e8e8;
     }
 
     .custum-file-upload .icon {
@@ -307,4 +307,19 @@ input:hover {
             opacity: 0;
         }
     }
+}
+
+.content {
+    background-color: #f4a261;
+    flex-grow: 1;
+}
+
+.menu-icon {
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
 }

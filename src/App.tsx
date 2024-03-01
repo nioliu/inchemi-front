@@ -9,6 +9,7 @@ function App() {
             display: "flex",
             minHeight: "100vh",
             alignItems: "flex-start",
+            padding: "0"
         }}>
             <Sidebar></Sidebar>
             <Content className={"flex-grow-1"}></Content>

@@ -3,6 +3,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import upload from '../assets/upload.svg'
 import history from '../assets/history.svg'
 import community from '../assets/community.svg'
+import menu from '../assets/menu.svg'
 
 export function Sidebar() {
     const navigate = useNavigate();
@@ -53,24 +54,29 @@ export function Sidebar() {
         <>
             <div style={{
                 position: "sticky",
-                top: "10px",
-                width: isVisible ? "200px" : "80px",
+                top: "0",
+                minHeight: "100vh",
+                width: isVisible ? "200px" : "70px",
                 overflow: "hidden",
                 transition: "all 0.5s ease", // 过渡动画
+                backgroundColor: "#e9c46a"
             }}>
                 <div style={{}}>
                     <div className="top-area" style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        flexDirection: "row-reverse"
+                        flexDirection: "row-reverse",
+                        alignItems: "baseline",
+                        padding: "5px 10px"
                     }}>
-                        <button onClick={handleClickHide} style={{
-                            width: "50px",
-                            margin: "auto"
-                        }}>{isVisible ? 'Hide' : 'Show'}</button>
-                        {isVisible && <div className="logo-area" style={{
-                            textWrap: "nowrap"
-                        }}>This is logo area</div>}
+                        <img className={"menu-icon"}
+                             onClick={handleClickHide}
+                             src={menu}
+                             alt={"load failed"}></img>
+                        {isVisible && <strong className="logo-area" style={{
+                            textWrap: "nowrap",
+                            fontSize: "30px"
+                        }}>Inchemi</strong>}
                     </div>
 
                     <div className="btn-area"
