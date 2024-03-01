@@ -7,6 +7,7 @@ import './components/Components.css'
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {Upload} from "./components/Upload.tsx";
 import {History} from "./components/History.tsx";
+import {Community} from "./components/Community.tsx";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/history",
                 element: <History></History>
+            },
+            {
+                path: "/community",
+                element: <Community/>
             }
         ]
     }

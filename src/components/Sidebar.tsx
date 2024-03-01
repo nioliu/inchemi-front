@@ -1,7 +1,8 @@
-import React, {useRef, useState} from "react";
-import {useLocation, useNavigate, useRoutes} from "react-router-dom";
+import React, {useState} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
 import upload from '../assets/upload.svg'
 import history from '../assets/history.svg'
+import community from '../assets/community.svg'
 
 export function Sidebar() {
     const navigate = useNavigate();
@@ -21,10 +22,10 @@ export function Sidebar() {
             name: "Upload", path: "/upload", iconSrc: upload
         },
         {
-            name: "History", path: "/history",iconSrc: history
+            name: "History", path: "/history", iconSrc: history
         },
         {
-            name: "Button3", path: "/btn3"
+            name: "Community", path: "/community", iconSrc: community
         }];
 
     // find the true index
@@ -41,7 +42,7 @@ export function Sidebar() {
                     style={{
                         width: !isVisible ? "40px" : undefined,
                     }}>
-                <img src={v.iconSrc} alt={"load failed"} ></img>
+                <img src={v.iconSrc} alt={"load failed"}></img>
                 {isVisible && <strong>{v.name}</strong>}
             </button>
         )

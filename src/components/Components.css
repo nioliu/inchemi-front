@@ -31,12 +31,15 @@ input:hover {
     box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
 }
 
-.icon {
-    position: absolute;
-    left: 1rem;
-    fill: #9e9ea7;
-    width: 1rem;
-    height: 1rem;
+.group {
+    .icon {
+        position: absolute;
+        left: 1rem;
+        fill: #9e9ea7;
+        width: 1rem;
+        height: 1rem;
+    }
+
 }
 
 .menu-btn {
@@ -58,6 +61,93 @@ input:hover {
     background-color: gray;
 }
 
-.menu-btn-choose{
-    background-color: aqua!important;
+.menu-btn-choose {
+    background-color: aqua !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* 淡入动画 */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+/* 淡出动画 */
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.upload-form-area {
+
+    .one-upload-area {
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+        align-items: flex-start;
+        display: flex;
+    }
+
+
+    .custum-file-upload {
+        height: 200px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed #e8e8e8;
+        background-color: #212121;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0px 48px 35px -48px #e8e8e8;
+    }
+
+    .custum-file-upload .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custum-file-upload .icon svg {
+        height: 80px;
+        fill: #e8e8e8;
+    }
+
+    .custum-file-upload .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custum-file-upload .text span {
+        font-weight: 400;
+        color: #e8e8e8;
+    }
+
+    .custum-file-upload input {
+        display: none;
+    }
+
+    img {
+        height: 200px;
+        object-fit: contain;
+    }
 }
