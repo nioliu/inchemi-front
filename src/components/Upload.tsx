@@ -49,7 +49,9 @@ function OneImage({index, callBack}: { index: number, callBack: (remove: boolean
                 }
                 {/*uploaded one img*/}
                 {
-                    oneImage && <img src={oneImage} alt={"load failed"}></img>
+                    oneImage && <img src={oneImage} alt={"load failed"} style={{
+                        width: "100%"
+                    }}></img>
                 }
                 <input id={"file-" + index} type="file" accept={".jpg,.svg,.png"} onChange={handleChangeInputImage}/>
             </label>
@@ -121,8 +123,12 @@ export function Upload() {
     return (
         <>
             <div className={"upload-form-area"}>
-                <Button variant={"primary"} onClick={handleAddClick}>+</Button>
-                <Button variant={"primary"} onClick={handleSubmit}>Submit</Button>
+                <div className={"btn-area"} style={{marginBottom: "10px"}}>
+                    <Button variant={"primary"} onClick={handleAddClick} style={{
+                        marginRight: "10px"
+                    }}>+</Button>
+                    <Button variant={"primary"} onClick={handleSubmit} style={{}}>Submit</Button>
+                </div>
 
                 {imageCompArr}
             </div>

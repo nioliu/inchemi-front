@@ -95,12 +95,12 @@ input:hover {
 }
 
 .upload-form-area {
-
     .one-upload-area {
         animation-name: fadeIn;
         animation-duration: 0.3s;
         align-items: flex-start;
         display: flex;
+        column-gap: 10px;
     }
 
 
@@ -254,6 +254,7 @@ input:hover {
         outline: 0;
         border: 1px solid rgba(105, 105, 105, 0.397);
         border-radius: 10px;
+        height: 50px;
     }
 
     .form label .input + span {
@@ -271,7 +272,9 @@ input:hover {
         font-size: 0.9em;
     }
 
-    .form label .input:focus + span, .form label .input:valid + span {
+    /*when placeholder not shown, transform the label's position*/
+
+    .form label .input:focus + span, .form label .input:not(:placeholder-shown) + span {
         top: 30px;
         font-size: 0.7em;
         font-weight: 600;
@@ -279,6 +282,10 @@ input:hover {
 
     .form label .input:valid + span {
         color: green;
+    }
+
+    .form label .input:invalid + span {
+        color: red;
     }
 
     .submit {
@@ -315,9 +322,7 @@ input:hover {
 }
 
 .menu-icon {
-    margin: auto;
-    border: 2px solid black;
-    border-radius: 5px;
+    margin: 0 auto 10px;
 }
 
 .menu-icon:hover {

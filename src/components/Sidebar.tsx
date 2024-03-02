@@ -66,8 +66,9 @@ export function Sidebar() {
                         display: "flex",
                         justifyContent: "space-between",
                         flexDirection: "row-reverse",
-                        alignItems: "baseline",
-                        padding: "5px 10px"
+                        alignItems: "flex-end",
+                        padding: "5px 10px",
+                        height: "50px"
                     }}>
                         <img className={"menu-icon"}
                              onClick={handleClickHide}

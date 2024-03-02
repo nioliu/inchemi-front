@@ -53,7 +53,7 @@ function Login({callback}: { callback: (action: number) => void }) {
                         <span>Password</span>
                     </label>
                     <button className="submit">Submit</button>
-                    <p className="signin">Don't have an account yet?
+                    <p className="signin">Don't have an account yet?&nbsp;
                         <strong className={"signIn"}
                                 onClick={handleClickSignIn}>Register
                         </strong>
@@ -92,7 +92,7 @@ function Login({callback}: { callback: (action: number) => void }) {
                         <span>Confirm password</span>
                     </label>
                     <button className="submit">Submit</button>
-                    <p className="signin">Already have an account ?
+                    <p className="signin">Already have an account?&nbsp;
                         <strong className={"signIn"}
                                 onClick={handleClickRegister}>
                             SignIn
