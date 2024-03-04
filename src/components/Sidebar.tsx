@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 import upload from '../assets/upload.svg'
 import history from '../assets/history.svg'
@@ -49,14 +49,24 @@ export function Sidebar() {
         )
     })
 
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            if (innerWidth < 800) {
+                setIsVisible(false)
+            }
+        })
+        console.log('12321321321')
+    }, []);
+
 
     return (
         <>
-            <div style={{
+            <div className={"side-bar"} style={{
                 position: "sticky",
                 top: "0",
-                minHeight: "100vh",
+                height: "100vh",
                 width: isVisible ? "200px" : "70px",
+                minWidth: isVisible ? "200px" : "70px",
                 overflow: "hidden",
                 transition: "all 0.5s ease", // 过渡动画
                 backgroundColor: "#e9c46a"

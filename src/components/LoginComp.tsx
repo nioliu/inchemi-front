@@ -11,10 +11,11 @@ export function LoginComp({callback}: { callback: (action: number) => void }) {
     // 确保在 document.querySelector('#root') 找到挂载点时才渲染 Portal
     const portalRoot = document.querySelector('#root');
     return (
-        <>{portalRoot && ReactDOM.createPortal(
-            <Login callback={callback}/>, // 作为 JSX 传递
-            portalRoot
-        )}
+        <>{
+            portalRoot && ReactDOM.createPortal(
+                <Login callback={callback}/>, // 作为 JSX 传递
+                portalRoot
+            )}
         </>
     );
 }
@@ -58,7 +59,9 @@ function Login({callback}: { callback: (action: number) => void }) {
                                 onClick={handleClickSignIn}>Register
                         </strong>
                     </p>
+                    <img className={"close-img"} src={close} alt={"load failed"} onClick={handleClickClose}/>
                 </form>
+
             </div>
             }
             {/*register*/}
@@ -98,10 +101,11 @@ function Login({callback}: { callback: (action: number) => void }) {
                             SignIn
                         </strong>
                     </p>
+                    <img className={"close-img"} src={close} alt={"load failed"} onClick={handleClickClose}/>
                 </form>
+
             </div>}
 
-            <img className={"close-img"} src={close} alt={"load failed"} onClick={handleClickClose}/>
         </div>
     )
 }

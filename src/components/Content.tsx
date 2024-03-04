@@ -16,9 +16,13 @@ export function Content(props: ContentProps) {
     const className = "" + props.className
 
     return (
-        <div className={className} style={{display: "flex", flexDirection: "column", minHeight: "100vh"}}>
+        <div className={className}
+             style={{display: "flex", flexDirection: "column", height: "100vh", overflow: "auto"}}>
             <Header></Header>
-            <div className={"content"}>
+            <div className={"content"} style={{
+                overflow: "auto",
+                flexGrow: "1"
+            }}>
                 <Outlet></Outlet>
             </div>
         </div>
@@ -45,11 +49,12 @@ function Header() {
     return (
         <>
             <div className={"flex-row-reverse"} style={{
+                height: "70px",
                 display: "flex",
                 alignItems: "center",
                 padding: "20px",
                 gap: "10px",
-                backgroundColor: "#e76f51"
+                backgroundColor: "#e76f51",
             }}>
                 {/*    personal information*/}
                 <Button variant={"primary"} onClick={handleClickLogin}>Login</Button>

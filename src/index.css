@@ -2,3 +2,8 @@
     /*border: 1px solid black;*/
     box-sizing: border-box;
 }
+
+#root {
+    background-color: #e7c572;
+}
+
