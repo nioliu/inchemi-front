@@ -36,6 +36,7 @@ function OneImage({index, callBack}: { index: number, callBack: (remove: boolean
         <div className={"one-img-area"}>
             {/*area fot upload functions*/}
             <div className={"one-upload-area"}>
+                <Button variant={"dark"} onClick={handleClickRemove}>-</Button>
                 <label htmlFor={"file-" + index} className="custum-file-upload">
                     {/*no image uploaded*/}
                     {oneImage === "" && <>
@@ -64,7 +65,7 @@ function OneImage({index, callBack}: { index: number, callBack: (remove: boolean
                     <input id={"file-" + index} type="file" accept={".jpg,.svg,.png"}
                            onChange={handleChangeInputImage}/>
                 </label>
-                <Button variant={"dark"} onClick={handleClickRemove}>-</Button>
+
             </div>
             {/*    area for display corresponding contents*/}
             <div className="description-area">

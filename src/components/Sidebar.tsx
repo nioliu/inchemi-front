@@ -3,7 +3,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import upload from '../assets/upload.svg'
 import history from '../assets/history.svg'
 import community from '../assets/community.svg'
-import menu from '../assets/menu.svg'
+import arrow from '../assets/arrow.svg'
 
 export function Sidebar() {
     const navigate = useNavigate();
@@ -80,9 +80,9 @@ export function Sidebar() {
                         padding: "5px 10px",
                         height: "50px"
                     }}>
-                        <img className={"menu-icon"}
+                        <img className={isVisible ? "menu-icon" : "menu-icon-reverse"}
                              onClick={handleClickHide}
-                             src={menu}
+                             src={arrow}
                              alt={"load failed"}></img>
                         {isVisible && <strong className="logo-area" style={{
                             textWrap: "nowrap",
