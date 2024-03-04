@@ -95,6 +95,10 @@ input:hover {
 }
 
 .upload-form-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
     @media (max-width: 500px) {
         .one-img-area, .chemi-description, .one-upload-area {
             flex-direction: column;

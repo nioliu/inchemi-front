@@ -68,7 +68,7 @@ export function Sidebar() {
                 width: isVisible ? "200px" : "70px",
                 minWidth: isVisible ? "200px" : "70px",
                 overflow: "hidden",
-                transition: "all 0.5s ease", // 过渡动画
+                transition: "width 0.5s ease", // 过渡动画
                 backgroundColor: "#e9c46a"
             }}>
                 <div style={{}}>
